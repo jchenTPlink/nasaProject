@@ -16,6 +16,10 @@
 		DF1CF3C92CB5B78C00273F1C /* nasaProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF3C82CB5B78C00273F1C /* nasaProjectTests.swift */; };
 		DF1CF3D32CB5B78C00273F1C /* nasaProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF3D22CB5B78C00273F1C /* nasaProjectUITests.swift */; };
 		DF1CF3D52CB5B78C00273F1C /* nasaProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF3D42CB5B78C00273F1C /* nasaProjectUITestsLaunchTests.swift */; };
+		DF1CF4182CB5D2A700273F1C /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF4172CB5D2A700273F1C /* FirstTabViewController.swift */; };
+		DF1CF41A2CB5D2C100273F1C /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF4192CB5D2C100273F1C /* SecondTabViewController.swift */; };
+		DF1CF41C2CB5D6EE00273F1C /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF41B2CB5D6EE00273F1C /* SwiftUIView.swift */; };
+		DF1CF41E2CB5D86A00273F1C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF41D2CB5D86A00273F1C /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		DF1CF3CE2CB5B78C00273F1C /* nasaProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nasaProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1CF3D22CB5B78C00273F1C /* nasaProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nasaProjectUITests.swift; sourceTree = "<group>"; };
 		DF1CF3D42CB5B78C00273F1C /* nasaProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nasaProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DF1CF4172CB5D2A700273F1C /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
+		DF1CF4192CB5D2C100273F1C /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
+		DF1CF41B2CB5D6EE00273F1C /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		DF1CF41D2CB5D86A00273F1C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,10 @@
 				DF1CF3B12CB5B78B00273F1C /* AppDelegate.swift */,
 				DF1CF3B32CB5B78B00273F1C /* SceneDelegate.swift */,
 				DF1CF3B52CB5B78B00273F1C /* ViewController.swift */,
+				DF1CF4172CB5D2A700273F1C /* FirstTabViewController.swift */,
+				DF1CF4192CB5D2C100273F1C /* SecondTabViewController.swift */,
+				DF1CF41B2CB5D6EE00273F1C /* SwiftUIView.swift */,
+				DF1CF41D2CB5D86A00273F1C /* Photo.swift */,
 				DF1CF3B72CB5B78B00273F1C /* Main.storyboard */,
 				DF1CF3BA2CB5B78C00273F1C /* Assets.xcassets */,
 				DF1CF3BC2CB5B78C00273F1C /* LaunchScreen.storyboard */,
@@ -258,7 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1CF41E2CB5D86A00273F1C /* Photo.swift in Sources */,
 				DF1CF3B62CB5B78B00273F1C /* ViewController.swift in Sources */,
+				DF1CF41A2CB5D2C100273F1C /* SecondTabViewController.swift in Sources */,
+				DF1CF41C2CB5D6EE00273F1C /* SwiftUIView.swift in Sources */,
+				DF1CF4182CB5D2A700273F1C /* FirstTabViewController.swift in Sources */,
 				DF1CF3B22CB5B78B00273F1C /* AppDelegate.swift in Sources */,
 				DF1CF3B42CB5B78B00273F1C /* SceneDelegate.swift in Sources */,
 			);
