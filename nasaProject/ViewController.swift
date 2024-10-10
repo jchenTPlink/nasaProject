@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 
+//TODO check project for retain cycles
 
 class PhotosObject: ObservableObject {
     
@@ -66,11 +67,11 @@ class ViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        photosObject.objectWillChange.sink {
-            self.firstTabVC.updateUI()
+        photosObject.$photos.sink { [unowned self] photos in
+            firstTabVC.newPhotos(newPhotos: photos)
         }.store(in: &cancellableBag)
         
-        let secondTabVC = SecondTabViewController(rootView: SwiftUIView(photos: self.photosObject) )
+        let secondTabVC = SecondTabViewController(rootView: SwiftUIView(photosObject: self.photosObject) )
         secondTabVC.tabBarItem = UITabBarItem(title: "SwiftUI", image: UIImage(systemName: "swift"), tag: 0)
         
         

@@ -23,6 +23,7 @@
 		DF1CF41A2CB5D2C100273F1C /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF4192CB5D2C100273F1C /* SecondTabViewController.swift */; };
 		DF1CF41C2CB5D6EE00273F1C /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF41B2CB5D6EE00273F1C /* SwiftUIView.swift */; };
 		DF1CF41E2CB5D86A00273F1C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF41D2CB5D86A00273F1C /* Photo.swift */; };
+		DF1CF4242CB7CE2E00273F1C /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF4232CB7CE2E00273F1C /* PhotoDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		DF1CF4192CB5D2C100273F1C /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 		DF1CF41B2CB5D6EE00273F1C /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		DF1CF41D2CB5D86A00273F1C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		DF1CF4232CB7CE2E00273F1C /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 		EC82A8381F4ED547416D37D0 /* Pods-nasaProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasaProject.release.xcconfig"; path = "Target Support Files/Pods-nasaProject/Pods-nasaProject.release.xcconfig"; sourceTree = "<group>"; };
 		EF64137D5426E7CAE44DB697 /* Pods-nasaProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasaProjectTests.release.xcconfig"; path = "Target Support Files/Pods-nasaProjectTests/Pods-nasaProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +142,7 @@
 				DF1CF4172CB5D2A700273F1C /* FirstTabViewController.swift */,
 				DF1CF4192CB5D2C100273F1C /* SecondTabViewController.swift */,
 				DF1CF41B2CB5D6EE00273F1C /* SwiftUIView.swift */,
+				DF1CF4232CB7CE2E00273F1C /* PhotoDetailView.swift */,
 				DF1CF41D2CB5D86A00273F1C /* Photo.swift */,
 				DF1CF3B72CB5B78B00273F1C /* Main.storyboard */,
 				DF1CF3BA2CB5B78C00273F1C /* Assets.xcassets */,
@@ -176,7 +179,6 @@
 				4AE68605F25D08BB5F958D4A /* Pods-nasaProjectTests.debug.xcconfig */,
 				EF64137D5426E7CAE44DB697 /* Pods-nasaProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -419,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1CF4242CB7CE2E00273F1C /* PhotoDetailView.swift in Sources */,
 				DF1CF41E2CB5D86A00273F1C /* Photo.swift in Sources */,
 				DF1CF3B62CB5B78B00273F1C /* ViewController.swift in Sources */,
 				DF1CF41A2CB5D2C100273F1C /* SecondTabViewController.swift in Sources */,
@@ -609,6 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6U2A7J9577;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = nasaProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -638,6 +642,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6U2A7J9577;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = nasaProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
