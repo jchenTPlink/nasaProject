@@ -44,7 +44,11 @@ struct SwiftUIView: View {
                                 .buttonStyle(PlainButtonStyle())
                             
                             
-                        }.padding([.horizontal])
+                        }
+                            .padding([.horizontal])
+                            .background( RoundedRectangle(cornerRadius: 25).fill(.white).shadow(color: Color.black, radius: 8, x: 0, y: 0)) //TODO get rid of these magic numbers somehow?
+                            .padding([.horizontal])
+                            .padding([.vertical])
                         
                         
                         
