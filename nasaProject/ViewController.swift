@@ -77,7 +77,6 @@ class ViewController: UITabBarController {
         
         self.viewControllers = [firstTabVC, secondTabVC]
         
-        // Do any additional setup after loading the view.
     }
 
 

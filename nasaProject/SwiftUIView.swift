@@ -59,7 +59,7 @@ struct SwiftUIView: View {
             }.toolbar {
                 
                 Button("", systemImage: "line.3.horizontal") {
-                    //TODO: organize views by photoID
+                    //TODO: Hamburger menu
                 }
                 
                 
@@ -68,30 +68,6 @@ struct SwiftUIView: View {
             
             
         }
-        
-//        ScrollView {
-//            
-//            LazyVGrid(columns: Array(repeating:.init(.fixed(300)), count: 1)) {
-//                
-//                ForEach(photosObject.photos, id: \.id) { photo in
-//                    
-//                    VStack {
-//                        
-//                        WebImage(url: URL(string: photo.imageSource))
-//                            .resizable()
-//                            .indicator(.activity)
-//                            .aspectRatio(contentMode: .fit)
-//                        
-//                        Text(photo.id.description)
-//                        Text(photo.earthDate)
-//                        
-//                    }
-//                    
-//                }
-//                
-//            }
-//            
-//        }
         
     }
 }
