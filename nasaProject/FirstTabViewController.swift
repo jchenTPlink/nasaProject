@@ -8,6 +8,26 @@
 import UIKit
 import SDWebImage
 import AVFoundation
+import SwiftUI
+
+class FirstTabNavigationController: UINavigationController {
+    
+    let mainVC = FirstTabViewController()
+    
+    init() {
+        super.init(rootViewController: mainVC)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func newPhotos(newPhotos: [Photo]) {
+        mainVC.newPhotos(newPhotos: newPhotos)
+    }
+    
+    
+}
 
 class FirstTabViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -38,6 +58,12 @@ class FirstTabViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let secondTabVC = UIHostingController<PhotoDetailView>(rootView: PhotoDetailView(photo: self.photos[indexPath.row]) )
+        
+        navigationController?.pushViewController(secondTabVC, animated: true)
+        
+        
         tableView.deselectRow(at: indexPath, animated: false)
     }
     

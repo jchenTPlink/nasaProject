@@ -24,18 +24,24 @@ struct SwiftUIView: View {
                         
                         HStack {
                             
-                            VStack {
+                            NavigationLink(destination: PhotoDetailView(photo: photo)) {
                                 
-                                Text(photo.id.description)
-                                    .bold()
-                                    .font(.system(size: 16))
+                                VStack {
+                                    
+                                    Text(photo.id.description)
+                                        .bold()
+                                        .font(.system(size: 16))
+                                    
+                                    WebImage(url: URL(string: photo.imageSource))
+                                        .resizable()
+                                        .indicator(.activity)
+                                        .aspectRatio(contentMode: .fit)
+                                    
+                                }
                                 
-                                WebImage(url: URL(string: photo.imageSource))
-                                    .resizable()
-                                    .indicator(.activity)
-                                    .aspectRatio(contentMode: .fit)
-                                
-                            }.padding([.vertical])
+                            }
+                                .padding([.vertical])
+                                .buttonStyle(PlainButtonStyle())
                             
                             
                         }.padding([.horizontal])

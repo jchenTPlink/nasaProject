@@ -57,8 +57,8 @@ class ViewController: UITabBarController {
     var photosObject = PhotosObject()
     var cancellableBag = Set<AnyCancellable>()
     
-    let firstTabVC: FirstTabViewController = {
-        var vc = FirstTabViewController()
+    let firstTabVC: FirstTabNavigationController = {
+        var vc = FirstTabNavigationController()
         vc.tabBarItem = UITabBarItem(title: "UIKit", image: UIImage(systemName: "cross.case"), tag: 0)
         return vc
     }()
