@@ -9,6 +9,8 @@ import UIKit
 import Combine
 
 //TODO check project for retain cycles
+//TODO cancel loading image if cell goes off screen
+//TODO take care of magic numbers all over project
 
 class PhotosObject: ObservableObject {
     

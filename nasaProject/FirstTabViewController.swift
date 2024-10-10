@@ -141,7 +141,7 @@ class NasaTableViewCell: UITableViewCell {
     }()
     
     let labelHeight = 30.0
-    let horizontalMargins = 30.0
+    let horizontalMargins = 20.0
     
     @objc dynamic private var centerImageView = UIImageView()
     
@@ -150,11 +150,17 @@ class NasaTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        contentView.backgroundColor = UIColor.white
+        contentView.layer.shadowOpacity = 1
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowRadius = 8
+        contentView.layer.cornerRadius = 25
+        
         contentView.addSubview(centerImageView)
         centerImageView.contentMode = .scaleAspectFit
         
         centerImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: labelHeight).isActive = true
-        centerImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        centerImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15).isActive = true
         centerImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: horizontalMargins).isActive = true
         centerImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -horizontalMargins).isActive = true
         centerImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -177,6 +183,8 @@ class NasaTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)  )
         
         // reframing label for orientation change
         if let image = centerImageView.image {
