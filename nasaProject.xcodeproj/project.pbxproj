@@ -24,6 +24,12 @@
 		DF1CF41C2CB5D6EE00273F1C /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF41B2CB5D6EE00273F1C /* SwiftUIView.swift */; };
 		DF1CF41E2CB5D86A00273F1C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF41D2CB5D86A00273F1C /* Photo.swift */; };
 		DF1CF4242CB7CE2E00273F1C /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF4232CB7CE2E00273F1C /* PhotoDetailView.swift */; };
+		DF1CF4302CB98E5C00273F1C /* NetworkService.docc in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF42F2CB98E5C00273F1C /* NetworkService.docc */; };
+		DF1CF4362CB98E5C00273F1C /* NetworkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1CF42C2CB98E5C00273F1C /* NetworkService.framework */; };
+		DF1CF43D2CB98E5C00273F1C /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF43C2CB98E5C00273F1C /* NetworkServiceTests.swift */; };
+		DF1CF43E2CB98E5C00273F1C /* NetworkService.h in Headers */ = {isa = PBXBuildFile; fileRef = DF1CF42E2CB98E5C00273F1C /* NetworkService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF1CF4412CB98E5C00273F1C /* NetworkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1CF42C2CB98E5C00273F1C /* NetworkService.framework */; };
+		DF1CF4422CB98E5C00273F1C /* NetworkService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF1CF42C2CB98E5C00273F1C /* NetworkService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +47,42 @@
 			remoteGlobalIDString = DF1CF3AD2CB5B78B00273F1C;
 			remoteInfo = nasaProject;
 		};
+		DF1CF4372CB98E5C00273F1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF1CF3A62CB5B78B00273F1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF1CF42B2CB98E5C00273F1C;
+			remoteInfo = NetworkService;
+		};
+		DF1CF4392CB98E5C00273F1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF1CF3A62CB5B78B00273F1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF1CF3AD2CB5B78B00273F1C;
+			remoteInfo = nasaProject;
+		};
+		DF1CF43F2CB98E5C00273F1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF1CF3A62CB5B78B00273F1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF1CF42B2CB98E5C00273F1C;
+			remoteInfo = NetworkService;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF1CF4462CB98E5C00273F1C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF1CF4422CB98E5C00273F1C /* NetworkService.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4AE68605F25D08BB5F958D4A /* Pods-nasaProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasaProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-nasaProjectTests/Pods-nasaProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +110,11 @@
 		DF1CF41B2CB5D6EE00273F1C /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		DF1CF41D2CB5D86A00273F1C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		DF1CF4232CB7CE2E00273F1C /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
+		DF1CF42C2CB98E5C00273F1C /* NetworkService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF1CF42E2CB98E5C00273F1C /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		DF1CF42F2CB98E5C00273F1C /* NetworkService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NetworkService.docc; sourceTree = "<group>"; };
+		DF1CF4352CB98E5C00273F1C /* NetworkServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF1CF43C2CB98E5C00273F1C /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		EC82A8381F4ED547416D37D0 /* Pods-nasaProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasaProject.release.xcconfig"; path = "Target Support Files/Pods-nasaProject/Pods-nasaProject.release.xcconfig"; sourceTree = "<group>"; };
 		EF64137D5426E7CAE44DB697 /* Pods-nasaProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasaProjectTests.release.xcconfig"; path = "Target Support Files/Pods-nasaProjectTests/Pods-nasaProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				143C6E3E20D8E82C3CAB1CBC /* Pods_nasaProject.framework in Frameworks */,
+				DF1CF4412CB98E5C00273F1C /* NetworkService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +142,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBB7CF5F56588EC1A2802E0F /* Pods_nasaProject_nasaProjectUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF1CF4292CB98E5C00273F1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF1CF4322CB98E5C00273F1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF1CF4362CB98E5C00273F1C /* NetworkService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +179,8 @@
 				DF1CF3B02CB5B78B00273F1C /* nasaProject */,
 				DF1CF3C72CB5B78C00273F1C /* nasaProjectTests */,
 				DF1CF3D12CB5B78C00273F1C /* nasaProjectUITests */,
+				DF1CF42D2CB98E5C00273F1C /* NetworkService */,
+				DF1CF43B2CB98E5C00273F1C /* NetworkServiceTests */,
 				DF1CF3AF2CB5B78B00273F1C /* Products */,
 				EE10EB5E0FCF9B6500B92F6F /* Pods */,
 				3384EC5189D87DF4456D771A /* Frameworks */,
@@ -129,6 +193,8 @@
 				DF1CF3AE2CB5B78B00273F1C /* nasaProject.app */,
 				DF1CF3C42CB5B78C00273F1C /* nasaProjectTests.xctest */,
 				DF1CF3CE2CB5B78C00273F1C /* nasaProjectUITests.xctest */,
+				DF1CF42C2CB98E5C00273F1C /* NetworkService.framework */,
+				DF1CF4352CB98E5C00273F1C /* NetworkServiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +235,23 @@
 			path = nasaProjectUITests;
 			sourceTree = "<group>";
 		};
+		DF1CF42D2CB98E5C00273F1C /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				DF1CF42E2CB98E5C00273F1C /* NetworkService.h */,
+				DF1CF42F2CB98E5C00273F1C /* NetworkService.docc */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		DF1CF43B2CB98E5C00273F1C /* NetworkServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF1CF43C2CB98E5C00273F1C /* NetworkServiceTests.swift */,
+			);
+			path = NetworkServiceTests;
+			sourceTree = "<group>";
+		};
 		EE10EB5E0FCF9B6500B92F6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +267,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		DF1CF4272CB98E5C00273F1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF1CF43E2CB98E5C00273F1C /* NetworkService.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		DF1CF3AD2CB5B78B00273F1C /* nasaProject */ = {
 			isa = PBXNativeTarget;
@@ -194,10 +288,12 @@
 				DF1CF3AB2CB5B78B00273F1C /* Frameworks */,
 				DF1CF3AC2CB5B78B00273F1C /* Resources */,
 				CC7BAF7FD03A3D0F886E5D4A /* [CP] Embed Pods Frameworks */,
+				DF1CF4462CB98E5C00273F1C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DF1CF4402CB98E5C00273F1C /* PBXTargetDependency */,
 			);
 			name = nasaProject;
 			productName = nasaProject;
@@ -243,6 +339,43 @@
 			productReference = DF1CF3CE2CB5B78C00273F1C /* nasaProjectUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		DF1CF42B2CB98E5C00273F1C /* NetworkService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF1CF4432CB98E5C00273F1C /* Build configuration list for PBXNativeTarget "NetworkService" */;
+			buildPhases = (
+				DF1CF4272CB98E5C00273F1C /* Headers */,
+				DF1CF4282CB98E5C00273F1C /* Sources */,
+				DF1CF4292CB98E5C00273F1C /* Frameworks */,
+				DF1CF42A2CB98E5C00273F1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkService;
+			productName = NetworkService;
+			productReference = DF1CF42C2CB98E5C00273F1C /* NetworkService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DF1CF4342CB98E5C00273F1C /* NetworkServiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF1CF4472CB98E5C00273F1C /* Build configuration list for PBXNativeTarget "NetworkServiceTests" */;
+			buildPhases = (
+				DF1CF4312CB98E5C00273F1C /* Sources */,
+				DF1CF4322CB98E5C00273F1C /* Frameworks */,
+				DF1CF4332CB98E5C00273F1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF1CF4382CB98E5C00273F1C /* PBXTargetDependency */,
+				DF1CF43A2CB98E5C00273F1C /* PBXTargetDependency */,
+			);
+			name = NetworkServiceTests;
+			productName = NetworkServiceTests;
+			productReference = DF1CF4352CB98E5C00273F1C /* NetworkServiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,6 +397,13 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = DF1CF3AD2CB5B78B00273F1C;
 					};
+					DF1CF42B2CB98E5C00273F1C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					DF1CF4342CB98E5C00273F1C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = DF1CF3AD2CB5B78B00273F1C;
+					};
 				};
 			};
 			buildConfigurationList = DF1CF3A92CB5B78B00273F1C /* Build configuration list for PBXProject "nasaProject" */;
@@ -282,6 +422,8 @@
 				DF1CF3AD2CB5B78B00273F1C /* nasaProject */,
 				DF1CF3C32CB5B78C00273F1C /* nasaProjectTests */,
 				DF1CF3CD2CB5B78C00273F1C /* nasaProjectUITests */,
+				DF1CF42B2CB98E5C00273F1C /* NetworkService */,
+				DF1CF4342CB98E5C00273F1C /* NetworkServiceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,6 +447,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DF1CF3CC2CB5B78C00273F1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF1CF42A2CB98E5C00273F1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF1CF4332CB98E5C00273F1C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,6 +605,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF1CF4282CB98E5C00273F1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF1CF4302CB98E5C00273F1C /* NetworkService.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF1CF4312CB98E5C00273F1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF1CF43D2CB98E5C00273F1C /* NetworkServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -461,6 +633,21 @@
 			isa = PBXTargetDependency;
 			target = DF1CF3AD2CB5B78B00273F1C /* nasaProject */;
 			targetProxy = DF1CF3CF2CB5B78C00273F1C /* PBXContainerItemProxy */;
+		};
+		DF1CF4382CB98E5C00273F1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF1CF42B2CB98E5C00273F1C /* NetworkService */;
+			targetProxy = DF1CF4372CB98E5C00273F1C /* PBXContainerItemProxy */;
+		};
+		DF1CF43A2CB98E5C00273F1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF1CF3AD2CB5B78B00273F1C /* nasaProject */;
+			targetProxy = DF1CF4392CB98E5C00273F1C /* PBXContainerItemProxy */;
+		};
+		DF1CF4402CB98E5C00273F1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF1CF42B2CB98E5C00273F1C /* NetworkService */;
+			targetProxy = DF1CF43F2CB98E5C00273F1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -743,6 +930,108 @@
 			};
 			name = Release;
 		};
+		DF1CF4442CB98E5C00273F1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6U2A7J9577;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TPlink.NetworkService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF1CF4452CB98E5C00273F1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6U2A7J9577;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TPlink.NetworkService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DF1CF4482CB98E5C00273F1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6U2A7J9577;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TPlink.NetworkServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nasaProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/nasaProject";
+			};
+			name = Debug;
+		};
+		DF1CF4492CB98E5C00273F1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6U2A7J9577;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TPlink.NetworkServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nasaProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/nasaProject";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -778,6 +1067,24 @@
 			buildConfigurations = (
 				DF1CF3DF2CB5B78C00273F1C /* Debug */,
 				DF1CF3E02CB5B78C00273F1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF1CF4432CB98E5C00273F1C /* Build configuration list for PBXNativeTarget "NetworkService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF1CF4442CB98E5C00273F1C /* Debug */,
+				DF1CF4452CB98E5C00273F1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF1CF4472CB98E5C00273F1C /* Build configuration list for PBXNativeTarget "NetworkServiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF1CF4482CB98E5C00273F1C /* Debug */,
+				DF1CF4492CB98E5C00273F1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
