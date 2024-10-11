@@ -30,6 +30,8 @@
 		DF1CF43E2CB98E5C00273F1C /* NetworkService.h in Headers */ = {isa = PBXBuildFile; fileRef = DF1CF42E2CB98E5C00273F1C /* NetworkService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF1CF4412CB98E5C00273F1C /* NetworkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1CF42C2CB98E5C00273F1C /* NetworkService.framework */; };
 		DF1CF4422CB98E5C00273F1C /* NetworkService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF1CF42C2CB98E5C00273F1C /* NetworkService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF1CF44B2CB9918600273F1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF44A2CB9918600273F1C /* NetworkManager.swift */; };
+		DF1CF44F2CB9D22800273F1C /* NasaApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1CF44E2CB9D22800273F1C /* NasaApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		DF1CF42F2CB98E5C00273F1C /* NetworkService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NetworkService.docc; sourceTree = "<group>"; };
 		DF1CF4352CB98E5C00273F1C /* NetworkServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1CF43C2CB98E5C00273F1C /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		DF1CF44A2CB9918600273F1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DF1CF44E2CB9D22800273F1C /* NasaApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaApiService.swift; sourceTree = "<group>"; };
 		EC82A8381F4ED547416D37D0 /* Pods-nasaProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasaProject.release.xcconfig"; path = "Target Support Files/Pods-nasaProject/Pods-nasaProject.release.xcconfig"; sourceTree = "<group>"; };
 		EF64137D5426E7CAE44DB697 /* Pods-nasaProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nasaProjectTests.release.xcconfig"; path = "Target Support Files/Pods-nasaProjectTests/Pods-nasaProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +218,7 @@
 				DF1CF3BA2CB5B78C00273F1C /* Assets.xcassets */,
 				DF1CF3BC2CB5B78C00273F1C /* LaunchScreen.storyboard */,
 				DF1CF3BF2CB5B78C00273F1C /* Info.plist */,
+				DF1CF44E2CB9D22800273F1C /* NasaApiService.swift */,
 			);
 			path = nasaProject;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 			children = (
 				DF1CF42E2CB98E5C00273F1C /* NetworkService.h */,
 				DF1CF42F2CB98E5C00273F1C /* NetworkService.docc */,
+				DF1CF44A2CB9918600273F1C /* NetworkManager.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 				DF1CF4182CB5D2A700273F1C /* FirstTabViewController.swift in Sources */,
 				DF1CF3B22CB5B78B00273F1C /* AppDelegate.swift in Sources */,
 				DF1CF3B42CB5B78B00273F1C /* SceneDelegate.swift in Sources */,
+				DF1CF44F2CB9D22800273F1C /* NasaApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1CF44B2CB9918600273F1C /* NetworkManager.swift in Sources */,
 				DF1CF4302CB98E5C00273F1C /* NetworkService.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,6 +802,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8BFD222532BA2FE06974D776 /* Pods-nasaProject.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -824,6 +833,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC82A8381F4ED547416D37D0 /* Pods-nasaProject.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

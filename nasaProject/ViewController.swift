@@ -19,35 +19,12 @@ class PhotosObject: ObservableObject {
     
     func getNewData() {
         
-        //TODO: store this API key someewhere else
-        guard let url = URL(string: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=AyHYvkgDh4gCmDpuFPUj5kmc2nLHsJS5ikGGHKHe") else {
-            return // handle error
+        Task {
+            let photoList = try await NasaApiService.shared.getPhotos()
+            DispatchQueue.main.async {
+                self.photos = photoList.photos
+            }
         }
-        
-        let task = URLSession.shared.dataTask(with: url) {[unowned self] (data, response, error) in
-            
-            guard error == nil else {
-                return //handle error
-            }
-            guard let data = data else {
-                return //handle error
-            }
-            
-            do {
-                
-                let photoList = try JSONDecoder().decode(PhotoList.self, from: data)
-                
-                DispatchQueue.main.async {
-                    self.photos = photoList.photos
-                }
-                
-            } catch {
-                return //handleerror
-            }
-            
-        }
-        
-        task.resume()
         
     }
     
