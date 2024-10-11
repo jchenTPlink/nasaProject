@@ -8,6 +8,7 @@ target 'nasaProject' do
   # Pods for nasaProject
 
 	pod 'SDWebImageSwiftUI'
+	pod 'Alamofire'
 
   target 'nasaProjectTests' do
     inherit! :search_paths
