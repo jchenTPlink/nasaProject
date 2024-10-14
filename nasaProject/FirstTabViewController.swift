@@ -69,7 +69,7 @@ class FirstTabViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        switch UIDevice.current.orientation {
+        switch view.window?.windowScene?.interfaceOrientation {
         case .landscapeLeft, .landscapeRight:
             return view.frame.height/1.2 // fit about 1 cell on landscape
         case .portrait, .portraitUpsideDown:
