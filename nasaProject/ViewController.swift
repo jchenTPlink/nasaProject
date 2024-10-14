@@ -10,6 +10,7 @@ import Combine
 
 //TODO check project for retain cycles
 //TODO take care of magic numbers all over project
+//TODO create class to abstract usage of SDWebImage
 
 class PhotosObject: ObservableObject {
     
@@ -34,26 +35,20 @@ class ViewController: UITabBarController {
     
     var photosObject = PhotosObject()
     var cancellableBag = Set<AnyCancellable>()
-    
-    let firstTabVC: FirstTabNavigationController = {
-        var vc = FirstTabNavigationController()
-        vc.tabBarItem = UITabBarItem(title: "UIKit", image: UIImage(systemName: "cross.case"), tag: 0)
-        return vc
-    }()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        photosObject.$photos.sink { [unowned self] photos in
-            firstTabVC.newPhotos(newPhotos: photos)
-        }.store(in: &cancellableBag)
-        
+        let firstTabVC = FirstTabNavigationController()
+        firstTabVC.tabBarItem = UITabBarItem(title: "UIKit", image: UIImage(systemName: "cross.case"), tag: 0)
         let secondTabVC = SecondTabViewController(rootView: SwiftUIView(photosObject: self.photosObject) )
         secondTabVC.tabBarItem = UITabBarItem(title: "SwiftUI", image: UIImage(systemName: "swift"), tag: 0)
         
-        
         self.viewControllers = [firstTabVC, secondTabVC]
+        
+        photosObject.$photos.sink { photos in
+            firstTabVC.newPhotos(newPhotos: photos)
+        }.store(in: &cancellableBag)
         
     }
 
