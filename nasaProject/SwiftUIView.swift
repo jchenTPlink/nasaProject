@@ -31,6 +31,7 @@ struct SwiftUIView: View {
                                     Text(photo.id.description)
                                         .bold()
                                         .font(.system(size: 16))
+                                        .foregroundStyle(.black)
                                     
                                     WebImage(url: URL(string: photo.imageSource))
                                         .resizable()
@@ -57,12 +58,7 @@ struct SwiftUIView: View {
                 }
                 
             }.toolbar {
-                
-                Button("", systemImage: "line.3.horizontal") {
-                    //TODO: Hamburger menu
-                }
-                
-                
+                Text("")
             }
             
             
