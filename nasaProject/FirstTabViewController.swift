@@ -60,13 +60,8 @@ class FirstTabViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell = tableView.cellForRow(at: indexPath) as! NasaTableViewCell
-        cell.tapped()
-        
         let secondTabVC = UIHostingController<PhotoDetailView>(rootView: PhotoDetailView(photo: self.photos[indexPath.row]) )
-        
         navigationController?.pushViewController(secondTabVC, animated: true)
-        
         tableView.deselectRow(at: indexPath, animated: false)
     }
     
@@ -100,32 +95,10 @@ class FirstTabViewController: UIViewController, UITableViewDelegate, UITableView
         photos = newPhotos
         tableView.reloadData()
     }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        coordinator.animate(alongsideTransition: nil) { _ in
-            // TODO there has to be a better solution...
-            // This is for orientation change
-            // The cell will still sometimes look funky
-            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: {_ in
-                self.tableView.reloadData()
-            })
-            // I've tried many other things... still looking for solution
-        }
-        
-    }
-
 
 }
 
 class NasaTableViewCell: UITableViewCell {
-    
-    func tapped() {
-        // leaving this here for testing. If a cell looks bad, tapping it will fix it
-        tableView?.reloadData()
-        // only time cell might look bad is after orientation change
-    }
     
     var swiftUIMargin: CGFloat = 16.0
     
@@ -141,7 +114,7 @@ class NasaTableViewCell: UITableViewCell {
                 
                 if let img = img {
                     
-                    heightConstraint = NSLayoutConstraint(item: centerImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: img.size.height*((contentView.frame.width - swiftUIMargin*2) / img.size.width))
+                    heightConstraint = centerImageView.heightAnchor.constraint(equalTo: centerImageView.widthAnchor, multiplier: img.size.height/img.size.width)
                     
                     centerImageView.addConstraint(heightConstraint)
                     
@@ -187,36 +160,40 @@ class NasaTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.backgroundColor = UIColor.white
-        contentView.layer.shadowOpacity = 1
-        contentView.layer.shadowColor = UIColor.black.cgColor
-        contentView.layer.shadowRadius = 8
-        contentView.layer.cornerRadius = 25
-        contentView.addSubview(idLabel)
-        contentView.addSubview(centerImageView)
+        
+        let containerView = UIView()
+        containerView.backgroundColor = contentView.backgroundColor
+        containerView.layer.shadowOpacity = 1
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowRadius = 8
+        containerView.layer.cornerRadius = 25
+        
+        contentView.addSubview(containerView)
+        
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: swiftUIMargin).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -(swiftUIMargin*1.5)).isActive = true
+        containerView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: swiftUIMargin).isActive = true
+        containerView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -swiftUIMargin).isActive = true
+        
+        containerView.addSubview(idLabel)
+        containerView.addSubview(centerImageView)
         
         idLabel.translatesAutoresizingMaskIntoConstraints = false
-        idLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: swiftUIMargin).isActive = true
-        idLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: swiftUIMargin).isActive = true
-        idLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -swiftUIMargin).isActive = true
+        idLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: swiftUIMargin).isActive = true
+        idLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: swiftUIMargin).isActive = true
+        idLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -swiftUIMargin).isActive = true
         
         centerImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        let botAnch = centerImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -swiftUIMargin*3)
+        let botAnch = centerImageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -swiftUIMargin)
         
         centerImageView.topAnchor.constraint(equalTo: idLabel.bottomAnchor, constant: 8).isActive = true
         botAnch.priority = .defaultHigh // Bottom constraint needs this when dealing with UITableViewCell dynamic sizing
         botAnch.isActive = true
         
-        centerImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 0).isActive = true
-        centerImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 0).isActive = true
-        
-    }
-    
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: swiftUIMargin, left: swiftUIMargin, bottom: swiftUIMargin, right: swiftUIMargin)  )
+        centerImageView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: swiftUIMargin).isActive = true
+        centerImageView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -swiftUIMargin).isActive = true
         
     }
     

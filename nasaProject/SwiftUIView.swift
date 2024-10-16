@@ -55,7 +55,7 @@ struct SwiftUIView: View {
                         
                     }
                     
-                }
+                }.background(Color.white)
                 
             }.toolbar {
                 Text("")
